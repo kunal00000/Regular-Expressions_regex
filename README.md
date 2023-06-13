@@ -1,11 +1,21 @@
 # Regular-Expressions_regex
 
-### 1. Whitespace: 
+1. [Whitespaces](#whitespace)
+2. [Phone Number (various formats)](#phone-numbers)
+3. [Email Addresses](#email-addresses)
+4. [URLs](#urls)
+5. [Data Extraction](#data-extraction)
+6. [Credit Card](#credit-card)
+
+<a id="whitespace"></a>
+### Whitespace
 - Regex:
   ```
   \s+
   ```
-### 2. Phone Numbers (various formats):
+
+<a id="phone-numbers"></a>
+### Phone Numbers
 - Validating phone numbers in different formats-
   - Regex pattern:
     ```
@@ -33,7 +43,8 @@
     - +86 10 1234 5678 (normalizes to +861012345678
     - +91 98765 43210 (normalizes to +919876543210)
 
-### 3. Email Addresses:
+<a id="email-addresses"></a>
+### Email Addresses
 - Validating email addresses:
   - Regex pattern:
     ```
@@ -51,8 +62,9 @@
   - Example formats:
     - john.doe@example.com (extracts example.com)
     - jane_smith123@gmail.com (extracts gmail.com)
-   
-### 4. URLs:
+
+<a id="urls"></a>
+### URLs
 
 - Validating URLs:
     - Regex pattern:
@@ -103,7 +115,8 @@
       - /path/file.html
       - ?param1=value1&param2=value2
 
-### 5. Data Extraction:
+<a id="data-extraction"></a>
+### Data Extraction
 
 - Extracting specific patterns from unstructured text:
   - To extract dates:
@@ -148,7 +161,8 @@
       email johndoe@example.com
       ```
 
-### 6. Credit Card:
+<a id="credit-card"></a>
+### Credit Card
 - Validating credit card numbers:
   - Regex Pattern: 
     ```
