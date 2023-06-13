@@ -1,4 +1,5 @@
 # Regular-Expressions_regex
+The ReadyRegex repository is a comprehensive collection of ready-to-use regular expressions (regex) for various common tasks. This repository aims to provide a valuable resource for developers, data analysts, and anyone working with text data, by offering a wide range of regex patterns specifically designed for tasks such as email validation, phone number parsing, credit card number recognition, and more.
 
 1. [Whitespaces](#whitespace)
 2. [Phone Number (various formats)](#phone-numbers)
