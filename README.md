@@ -2,10 +2,26 @@
 
 1. [Whitespaces](#whitespace)
 2. [Phone Number (various formats)](#phone-numbers)
+  1. [Validating phone numbers in various formats](#validate-phone)
+  2. [Normalizing phone numbers to a consistent format:](#normalise-phone)
 3. [Email Addresses](#email-addresses)
+  1. [Validating email addresses:](#validate-email)
+  2. [Extracting domain names from email addresses:](#extract-domain)
 4. [URLs](#urls)
+  1. [Validating URLs:](#validate-url)
+  2. [Extract Protocol](#extract-protocol)
+  3. [Extract Domain](#extract-domain)
+  4. [Extract Path](#extract-path)
+  5. [Extract Query Parameters](#extract-params)
 5. [Data Extraction](#data-extraction)
+  1. [To extract dates:](#extract-dates)
+  2. [To extract time:](#extract-times)
+  3. [To extract address:](#extract-address)
+  4. [To extract values from XML:](#extract-xml)
 6. [Credit Card](#credit-card)
+  1. [Validating credit card numbers:](#validate-credit)
+  2. [Extracting credit card expiration dates:](#extract-expiry-date)
+  3. [Matching CVV (Card Verification Value) codes:](#extract-cvv) 
 
 <a id="whitespace"></a>
 ### Whitespace
@@ -16,6 +32,7 @@
 
 <a id="phone-numbers"></a>
 ### Phone Numbers
+<a id="validate-phone"></a>
 - Validating phone numbers in different formats-
   - Regex pattern:
     ```
@@ -29,7 +46,8 @@
     - +1 (416) 555 7890
     - +33 123456789
     - +91 9876543210
-
+    - 
+<a id="normalise-phone"></a>
 - Normalizing phone numbers to a consistent format:
 
   - Regex pattern:
@@ -45,6 +63,7 @@
 
 <a id="email-addresses"></a>
 ### Email Addresses
+<a id="validate-email"></a>
 - Validating email addresses:
   - Regex pattern:
     ```
@@ -53,7 +72,7 @@
   - Example formats:
     - john.doe@example.com
     - jane_smith123@gmail.com
-
+<a id="extract-domain"></a>
 - Extracting domain names from email addresses:
   - Regex pattern:
     ```
@@ -65,7 +84,7 @@
 
 <a id="urls"></a>
 ### URLs
-
+<a id="validate-url"></a>
 - Validating URLs:
     - Regex pattern:
       ```
@@ -75,8 +94,9 @@
       - https://www.example.com
       - http://ftp.example.com/file.txt
 
+<a id="extract-comp"></a>
 - Extracting different components of a URL(https://www.example.com/path/file.html?param1=value1&param2=value2):
-
+<a id="extract-protocol"></a>
   - Extracting protocol:
     - Regex pattern:
       ```
@@ -85,7 +105,7 @@
     - Example format:
       - https://
       - http://
-  
+  <a id="extract-domain"></a>
   - Extracting domain:
     - Regex pattern:
       ```
@@ -94,7 +114,7 @@
     - Example format:
       - www.example.com
       - www.google.com
-    
+  <a id="extract-path"></a>
   - Extracting path:
     - Regex pattern:
       ```
@@ -102,7 +122,7 @@
       ```
     - Example format:
       - /path/file.html
-  
+  <a id="extract-params"></a>
   - Extracting query parameters:
     - Regex pattern:
       ```
@@ -119,20 +139,21 @@
 ### Data Extraction
 
 - Extracting specific patterns from unstructured text:
+<a id="extract-dates"></a>
   - To extract dates:
     ```
     (\d{1,2})\/(\d{1,2})\/(\d{4})
     ```
     - Example:
       - Extract "12/31/2023" from a text.
-     
+  <a id="extract-times"></a>
   - To extract times:
     ```
     ([01]\d|2[0-3]):([0-5]\d)
     ```
     - Example:
       - Extract "18:45" from a text.
-  
+  <a id="extract-address"></a>
   - To extract addresses:
     ```
     \d+\s[A-Za-z]+\s[A-Za-z]+,\s[A-Za-z]+\s\d+
@@ -141,6 +162,7 @@
       - Extract "123 Main St, New York 10001" from a text.
      
 - Extracting values from structured data formats:
+  <a id="extract-xml"></a>
   - To extract values from XML:
     ```
     <(.*?)>([^<]+)<\/\1>
@@ -163,6 +185,7 @@
 
 <a id="credit-card"></a>
 ### Credit Card
+<a id="validate-credit"></a>
 - Validating credit card numbers:
   - Regex Pattern: 
     ```
@@ -172,7 +195,7 @@
       - 4111 1111 1111 1111
       - 5555-5555-5555-4444
       - 3782822463100058
-
+<a id="extract-expiry-date"></a>
 - Extracting credit card expiration dates:
   - Regex Pattern:
     ```
@@ -182,7 +205,7 @@
       - 12/2023
       - 05/2025
       - 09/2030
-
+<a id="extract-cvv"></a>
 - Matching CVV (Card Verification Value) codes:
   - Regex Pattern:
     ```
